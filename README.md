@@ -5,3 +5,4 @@ I will be taking these .php pages from facebook api and running them via google 
 Its never been done yet and it kinds tough so if anyone would like to jump in and help. I offer full support even add you to devolpers councel in Google.
 As i said the facebook api is fine. I am now just trying to get these php pages to run and response via google A.I. api.
 it would be nice to get working on amazon A.i. as far as I can tell they are the only AI up to this task.
+email me if you like elgoogmex@gmail.com
