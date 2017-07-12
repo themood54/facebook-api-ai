@@ -3,10 +3,10 @@ session_start();
 require_once __DIR__ . '/src/Facebook/autoload.php';
 
 $fb = new Facebook\Facebook([
-  'app_id' => '298825430560300',
-  'app_secret' => '4ac8cfdbd7eb8f655606244856d7e610',
-  'default_graph_version' => 'v2.9',
- ]);
+  'app_id' => 'APP_ID',
+  'app_secret' => 'APP_SECRET',
+  'default_graph_version' => 'v2.5',
+  ]);
 
 $helper = $fb->getRedirectLoginHelper();
 
@@ -65,7 +65,7 @@ if (isset($accessToken)) {
 	foreach ($permissions as $key) {
 		if ($key['status'] == 'declined') {
 			$declined[] = $key['permission'];
-			$loginUrl = $helper->getLoginUrl('http://livewebsite.org/Facebook/check-declined-granted-permission.php/', $declined);
+			$loginUrl = $helper->getLoginUrl('http://sohaibilyas.com/APP_DIR/', $declined);
 			echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 		}
 	}
@@ -74,6 +74,6 @@ if (isset($accessToken)) {
 
 } else {
 	// replace your website URL same as added in the developers.facebook.com/apps e.g. if you used http instead of https and you used non-www version or www version of your website then you must add the same here
-	$loginUrl = $helper->getLoginUrl('http://livewebsite.org/Facebook/check-declined-granted-permission.php/', $permissions);
+	$loginUrl = $helper->getLoginUrl('http://sohaibilyas.com/APP_DIR/', $permissions);
 	echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 }
